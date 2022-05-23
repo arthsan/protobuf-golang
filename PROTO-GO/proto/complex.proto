@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "dummy.proto";
+
+package example.complex;
+
+option go_package = "example.com/m/proto";
+
+message Complex {
+  example.dummy.Dummy one_dummy = 1;
+  repeated example.dummy.Dummy multiple_dummies = 2;
+}
